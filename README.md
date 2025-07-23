@@ -2,6 +2,10 @@
 
 A tool to clean up local git branches that have already been merged or squashed into a target branch (default: `main`).
 
+## Requirements
+- `git` (command-line tool)
+- GitHub CLI (`gh`)
+
 ## Features
 - Safely deletes local branches that have been merged or squashed into the target branch
 - Checks each branch for a merged pull request using GitHub CLI (`gh pr view`); skips branches with open PRs

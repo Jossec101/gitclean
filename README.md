@@ -3,11 +3,13 @@
 A tool to clean up local git branches that have already been merged or squashed into a target branch (default: `main`).
 
 ## Features
-- Checks each branch for a merged PR using `gh pr view` and excludes branches with open PRs from deletion
-- Detects branches merged or squashed into `main`/`master` (or any target branch)
-- Uses GitHub CLI (`gh`) to check for open/merged PRs for extra safety
-- Backs up your repo before deleting branches
-- Supports dry-run mode (shows what would be deleted)
+- Safely deletes local branches that have been merged or squashed into the target branch
+- Checks each branch for a merged pull request using GitHub CLI (`gh pr view`); skips branches with open PRs
+- Backs up your repository before deleting any branches
+- Dry-run mode: preview branches that would be deleted without making changes
+- Force mode: delete branches without confirmation
+- Specify any target branch to compare against (default: origin/main)
+- Configurable log level (debug, info, warn, error) with emoji and timestamped logs
 - Fast: only fetches the target branch from origin
 
 ## Installation

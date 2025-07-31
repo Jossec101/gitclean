@@ -18,6 +18,18 @@ A tool to clean up local git branches that have already been merged or squashed 
 
 ## Installation
 
+### Homebrew (macOS/Linux)
+
+```sh
+# Add the tap (one-time setup)
+brew tap Jossec101/gitclean
+
+# Install gitclean
+brew install gitclean
+```
+
+### Go Install
+
 ```sh
 go install github.com/jossec101/gitclean@latest
 ```

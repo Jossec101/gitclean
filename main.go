@@ -15,6 +15,12 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+)
+
 func getLocalBranches(target string) ([]string, error) {
 	cmd := exec.Command("git", "branch", "-l")
 	cmd.Env = append(os.Environ(), "GIT_PAGER=cat") // Prevent pager
@@ -103,8 +109,9 @@ func main() {
 		TimestampFormat: "2006-01-02 15:04:05",
 	})
 	app := &cli.App{
-		Name:  "gitclean",
-		Usage: "Clean up local git branches that have been merged or squashed into a target branch.",
+		Name:    "gitclean",
+		Usage:   "Clean up local git branches that have been merged or squashed into a target branch.",
+		Version: version,
 		Flags: []cli.Flag{
 			&cli.BoolFlag{
 				Name:  "dryrun",

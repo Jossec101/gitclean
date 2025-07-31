@@ -88,9 +88,7 @@ brews:
     # Dependencies of your package
     dependencies:
       - name: git
-        type: optional
       - name: gh
-        type: optional
     
     # So you can `brew test` your formula.
     test: |

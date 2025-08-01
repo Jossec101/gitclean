@@ -34,6 +34,17 @@ brew install gitclean
 go install github.com/jossec101/gitclean@latest
 ```
 
+## Development
+
+This project uses [Just](https://github.com/casey/just) as a command runner for development tasks:
+
+```sh
+just build          # Build the binary
+just test           # Run tests
+just release-test   # Test release process
+just --list         # Show all available commands
+```
+
 ## Usage
 
 ```sh

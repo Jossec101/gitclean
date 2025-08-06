@@ -63,10 +63,10 @@ brews:
     homepage: "https://github.com/Jossec101/gitclean"
     license: "MIT"
     
-    # Repository configuration - using the same repository
+    # Repository configuration for the tap
     repository:
       owner: Jossec101
-      name: gitclean
+      name: homebrew-gitclean
       branch: main
     
     # Git author used to commit to the repository.
